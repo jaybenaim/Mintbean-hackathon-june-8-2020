@@ -52,6 +52,7 @@ class Form extends React.Component {
         <label htmlFor="variation">
           Variation (default, pastel, soft, light, hard, pale)
         </label>
+        <br />
         <button
           type="submit"
           className="btn btn-outline-primary"
