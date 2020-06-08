@@ -6,5 +6,5 @@ import paletteReducer from "./paletteReducers";
 export default combineReducers({
   auth: authReducer,
   errors: errorReducer,
-  pallete: paletteReducer,
+  palette: paletteReducer,
 });

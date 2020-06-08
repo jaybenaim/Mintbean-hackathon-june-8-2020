@@ -50,8 +50,6 @@ class Form extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  palette: { hue: state.hue, scheme: state.scheme, variation: state.variation },
-});
+const mapStateToProps = (state) => ({});
 
 export default withRouter(connect(mapStateToProps, { setColorScheme })(Form));
