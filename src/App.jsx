@@ -2,7 +2,6 @@
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
 
 import Home from "./components/Home/Home";
 import Login from "./components/Auth/Login";
@@ -24,7 +23,6 @@ const App = () => {
         <Route exact path="/login" render={(props) => <Login {...props} />} />
         <Route exact path="/404" render={(props) => <ErrorPage {...props} />} />
       </Switch>
-      <Footer />
     </React.Fragment>
   );
 };
