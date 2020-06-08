@@ -25,7 +25,7 @@ class SavedPalette extends Component {
   };
 
   render() {
-    return <div className="saved-palettes">Saved Palettes</div>;
+    return <div className="saved-palettes"></div>;
   }
 }
 

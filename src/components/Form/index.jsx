@@ -22,7 +22,6 @@ class Form extends React.Component {
     const { hue, scheme, variation } = this.state;
     return (
       <form>
-        <label htmlFor="hue">Hue</label>
         <input
           type="text"
           name="hue"
@@ -30,9 +29,8 @@ class Form extends React.Component {
           placeholder="hue"
           onChange={this.handleChange}
         ></input>
-        <label htmlFor="schemes">
-          Scheme Type (mono, contrast, triade, tetrade, analogic)
-        </label>
+        <label htmlFor="hue">Hue</label>
+
         <input
           type="text"
           name="scheme"
@@ -40,9 +38,10 @@ class Form extends React.Component {
           value={scheme}
           onChange={this.handleChange}
         ></input>
-        <label htmlFor="variation">
-          Variation (default, pastel, soft, light, hard, pale)
+        <label htmlFor="schemes">
+          Scheme Type (mono, contrast, triade, tetrade, analogic)
         </label>
+
         <input
           type="text"
           name="variation"
@@ -50,6 +49,9 @@ class Form extends React.Component {
           value={variation}
           onChange={this.handleChange}
         ></input>
+        <label htmlFor="variation">
+          Variation (default, pastel, soft, light, hard, pale)
+        </label>
         <button
           type="submit"
           className="btn btn-outline-primary"
