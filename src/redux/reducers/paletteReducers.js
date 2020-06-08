@@ -16,8 +16,10 @@ export default function (state = initialState, action) {
       };
     case SET_PALLETS:
       return {
-        palettes: Object.assign({}, state, { palettes: action.payload }),
+        ...state,
+        palettes: action.payload,
       };
+
     default:
       return state;
   }

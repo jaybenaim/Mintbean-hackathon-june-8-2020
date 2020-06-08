@@ -1,5 +1,5 @@
 import React from "react";
-import local from "../../api/local";
+import backend from "../../api/backend";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,7 +8,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 class SavePalette extends React.Component {
   savePalette = () => {
     const { palette, userId } = this.props;
-    local
+    backend
       .post("/palettes", { palette, user: userId })
       .then((res) => console.log(res))
       .catch((err) => console.log(err));

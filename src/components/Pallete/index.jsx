@@ -7,7 +7,12 @@ import { withRouter } from "react-router-dom";
 import { setColorScheme } from "../../redux/actions/paletteActions";
 
 const Palette = (props) => {
-  const { hue, scheme: colorScheme, variation } = props.palette;
+  let { hue, scheme: colorScheme, variation } = props.palette;
+  if (!hue) {
+    hue = "21";
+    colorScheme = "triade";
+    variation = "soft";
+  }
   // get scheme from colorScheme package
   const getColorScheme = (props) => {
     // create instance

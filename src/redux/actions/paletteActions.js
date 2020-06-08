@@ -1,5 +1,5 @@
 import { SET_COLOR_SCHEME, GET_ERRORS, SET_PALLETS } from "./types";
-import local from "../../api/backend";
+import backend from "../../api/backend";
 
 export const setColorScheme = (payload) => {
   return {
@@ -9,7 +9,7 @@ export const setColorScheme = (payload) => {
 };
 
 export const getPalettes = (userId) => (dispatch) => {
-  local
+  backend
     .get(`/palettes?userId=${userId}`)
     .then((res) => {
       dispatch(setPalettes(res.data));

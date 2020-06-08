@@ -16,7 +16,7 @@ const App = () => {
       <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/" component={Saved} />
+        <Route exact path="/saved" component={Saved} />
         <Route
           exact
           path="/register"
