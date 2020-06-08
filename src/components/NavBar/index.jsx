@@ -19,6 +19,10 @@ const NavBar = () => {
           <Link className="nav-item nav-link active" to="/">
             Home
           </Link>
+          <Link className="nav-item nav-link active" to="/saved">
+            Saved Palettes
+          </Link>
+
           <Auth></Auth>
         </div>
       </nav>

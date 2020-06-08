@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 class SavePalette extends React.Component {
-  state = {};
   savePalette = () => {
     const { palette, userId } = this.props;
     local
@@ -15,18 +14,7 @@ class SavePalette extends React.Component {
       .catch((err) => console.log(err));
   };
 
-  getPalettes = () => {
-    const { userId } = this.props;
-    local
-      .get(`/palettes?userId=${userId}`)
-      .then((res) => console.log(res.data))
-      .catch((err) => console.log(err));
-  };
-  componentDidUpdate() {
-    this.getPalettes();
-  }
   render() {
-    this.getPalettes();
     return (
       <div onClick={() => this.savePalette()}>
         <FontAwesomeIcon icon={faHeart} /> Save Palette
