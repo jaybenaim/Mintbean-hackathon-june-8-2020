@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { setColorScheme } from "../../redux/actions/paletteActions";
 import { withRouter } from "react-router-dom";
+import "../../assets/stylesheets/form.css";
 
 class Form extends React.Component {
   state = {
@@ -21,6 +22,7 @@ class Form extends React.Component {
     const { hue, scheme, variation } = this.state;
     return (
       <form>
+        <label htmlFor="hue">Hue</label>
         <input
           type="text"
           name="hue"
@@ -28,6 +30,9 @@ class Form extends React.Component {
           placeholder="hue"
           onChange={this.handleChange}
         ></input>
+        <label htmlFor="scheme">
+          Scheme Type (mono, contrast, triade, tetrade, analogic)
+        </label>
         <input
           type="text"
           name="scheme"
@@ -35,6 +40,9 @@ class Form extends React.Component {
           value={scheme}
           onChange={this.handleChange}
         ></input>
+        <label htmlFor="variation">
+          Variation (default, pastel, soft, light, hard, pale)
+        </label>
         <input
           type="text"
           name="variation"
@@ -42,7 +50,12 @@ class Form extends React.Component {
           value={variation}
           onChange={this.handleChange}
         ></input>
-        <button type="submit" onClick={this.update} placeholder="Update">
+        <button
+          type="submit"
+          className="btn btn-outline-primary"
+          onClick={this.update}
+          placeholder="Update"
+        >
           Update
         </button>
       </form>
