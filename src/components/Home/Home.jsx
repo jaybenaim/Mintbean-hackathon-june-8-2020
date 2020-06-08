@@ -1,5 +1,6 @@
 ﻿import React from "react";
 import Pallete from "../Pallete";
+import "../../assets/stylesheets/home.css";
 
 const Home = () => {
   return (

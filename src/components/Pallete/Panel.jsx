@@ -6,7 +6,7 @@ const Panel = (props) => {
     height: "400px",
     width: "200px",
   };
-  return <div className="panel" style={styles}></div>;
+  return <div className=" panel" style={styles}></div>;
 };
 
 export default Panel;
