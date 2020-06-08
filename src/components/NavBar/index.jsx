@@ -19,6 +19,7 @@ const NavBar = () => {
           <Link className="nav-item nav-link active" to="/">
             Home
           </Link>
+          <Auth></Auth>
         </div>
       </nav>
     </React.Fragment>

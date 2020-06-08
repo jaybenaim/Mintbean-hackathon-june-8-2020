@@ -12,7 +12,7 @@ const passport = require("passport");
 const indexRouter = require("./routes");
 
 require("dotenv").config();
-// require("./config/db");
+require("./config/db");
 
 const app = express();
 

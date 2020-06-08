@@ -12,7 +12,7 @@ class Form extends React.Component {
   };
   handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState({ [name]: value });
+    this.setState({ [name]: value.toLowerCase() });
   };
   update = (e) => {
     e.preventDefault();
@@ -30,7 +30,7 @@ class Form extends React.Component {
           placeholder="hue"
           onChange={this.handleChange}
         ></input>
-        <label htmlFor="scheme">
+        <label htmlFor="schemes">
           Scheme Type (mono, contrast, triade, tetrade, analogic)
         </label>
         <input
