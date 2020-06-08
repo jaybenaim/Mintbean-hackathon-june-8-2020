@@ -1,5 +1,4 @@
 ﻿import React from "react";
-import Auth from "../Auth";
 
 const Home = () => {
   return (
@@ -7,7 +6,6 @@ const Home = () => {
       <div className="container">
         <div className="row justify-content-center mt-5 p-0">
           <h3>Home</h3>
-          <Auth></Auth>
         </div>
       </div>
     </main>

@@ -1,6 +1,8 @@
 ﻿import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./navbar.module.css";
+import Auth from "../Auth";
+
 
 //TODO Web Template Studio: Add a new link in the NavBar for your page here.
 // A skip link is included as an accessibility best practice. For more information visit https://www.w3.org/WAI/WCAG21/Techniques/general/G1.
@@ -18,6 +20,8 @@ const NavBar = () => {
           <Link className="nav-item nav-link active" to="/">
             Home
           </Link>
+          <Auth></Auth>
+
         </div>
       </nav>
     </React.Fragment>
