@@ -12,24 +12,20 @@ class SavedPalette extends Component {
     scheme.from_hue(hue).scheme(colorScheme).variation(variation);
     let colors = scheme.colors();
 
-    return colors.map((color, i) => <Panel color={color} key={i} />);
+    return colors;
   };
 
   savedElements = () => {
     let elms = this.props.palettes;
     let newElems = [];
     elms.forEach((el, i) => {
-      return this.getColorScheme(el.hue, el.scheme, el.variation);
+      newElems.push(this.getColorScheme(el.hue, el.scheme, el.variation));
     });
+    return newElems.map((el) => <Panel color={el} />);
   };
 
   render() {
-    return (
-      <div className="saved-palettes">
-        Saved Palettes
-        {this.savedElements()}
-      </div>
-    );
+    return <div className="saved-palettes">Saved Palettes</div>;
   }
 }
 
