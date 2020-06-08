@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import local from "../../api/local";
+import backend from "../../api/backend";
 import SavedPalette from "./SavedPalette";
 // import { getPalettes } from "../../redux/actions/paletteActions";
 
@@ -14,7 +14,7 @@ class Saved extends React.Component {
     const { userId } = this.props;
     const { palettes } = this.state;
 
-    local
+    backend
       .get(`/palettes?userId=${userId}`)
       .then((res) => {
         this.setState({ palettes: [...palettes, ...res.data] });
