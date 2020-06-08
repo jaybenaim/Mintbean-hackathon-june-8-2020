@@ -4,12 +4,14 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
-const users = require("./routes/api/users");
 const cors = require("cors");
 const CONSTANTS = require("./constants");
 const { PORT: port } = CONSTANTS;
 const passport = require("passport");
+
 const indexRouter = require("./routes");
+const users = require("./routes/api/users");
+const palettes = require("./routes/api/palettes");
 
 require("dotenv").config();
 require("./config/db");
@@ -58,6 +60,7 @@ require("./config/passport")(passport);
 // Routes
 app.use("/api", indexRouter);
 app.use("/api/users", users);
+app.use("/api/palettes", palettes);
 
 app.get("*", (req, res) => {
   res.sendFile("dist/index.html", { root: __dirname });

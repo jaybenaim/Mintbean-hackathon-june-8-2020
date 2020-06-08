@@ -2,6 +2,7 @@
 import Pallete from "../Pallete";
 import "../../assets/stylesheets/home.css";
 import Form from "../Form";
+import SavePalette from "../SavePalette";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
           <div className="palette-container">
             <Pallete />
             <Form />
+            <SavePalette />
           </div>
         </div>
       </div>

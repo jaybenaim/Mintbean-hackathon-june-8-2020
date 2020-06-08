@@ -6,3 +6,9 @@
     width: 120%;
   }
 }
+.fa-heart {
+  color: #ff0000;
+}
+.fa-heart:hover {
+  cursor: pointer;
+}
