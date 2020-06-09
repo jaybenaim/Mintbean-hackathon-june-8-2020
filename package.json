@@ -51,7 +51,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js src/**/*.jsx",
-    "heroku-prebuild": "node ./buildScript;"
+    "heroku-prebuild": "node ./buildScript; cd server && npm install && cd .."
   },
   "proxy": "http://localhost:3001",
   "browserslist": [
